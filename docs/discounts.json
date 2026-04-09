@@ -1,6 +1,91 @@
 {
-  "updated_at": "2026-04-09T02:19:24.903419+00:00",
-  "total": 0,
+  "updated_at": "2026-04-09T02:29:13.604388+00:00",
+  "total": 6,
   "errors": {},
-  "discounts": []
+  "discounts": [
+    {
+      "id": "3d8482e76dda",
+      "title": "【週三小確幸】2026年3~4月熱門商品🔥限量5折起(週三11:00開放)",
+      "platform": "Hami Point",
+      "discount_amount": "【週三小確幸】2026年3~4月熱門商品🔥限量5折起(週三11:00開放)",
+      "discount_value_pct": "50.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "50.0"
+    },
+    {
+      "id": "511117309c7e",
+      "title": "【票券館】快樂兒童節，一起FUN開心-熱銷7折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】快樂兒童節，一起FUN開心-熱銷7折起",
+      "discount_value_pct": "30.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "30.0"
+    },
+    {
+      "id": "e0824661b212",
+      "title": "週四購物日指定品牌最高10%",
+      "platform": "Hami Point",
+      "discount_amount": "週四購物日指定品牌最高10%",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "購物",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
+    },
+    {
+      "id": "a3783723af0f",
+      "title": "誠品生活使用一卡通滿額享 10% 回饋 !",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "誠品生活使用一卡通滿額享 10% 回饋 !",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
+      "urgency_days": null,
+      "value_score": "10"
+    },
+    {
+      "id": "8767beab6396",
+      "title": "週末補貨日酷澎最高5%",
+      "platform": "Hami Point",
+      "discount_amount": "週末補貨日酷澎最高5%",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "5"
+    },
+    {
+      "id": "9e613b9d5f58",
+      "title": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "繳費",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=0",
+      "urgency_days": null,
+      "value_score": "5"
+    }
+  ]
 }
