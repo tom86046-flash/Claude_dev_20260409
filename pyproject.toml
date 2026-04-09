@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "taiwan-discounts"
+version = "0.1.0"
+description = "台灣支付平台優惠聚合工具 - 自動爬取 Hami Point、悠游付、Line Pay 高價值優惠"
+authors = []
+packages = [{include = "taiwan_discounts", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.0"}
+playwright = "^1.44.0"
+pydantic = "^2.7.0"
+pydantic-settings = "^2.3.0"
+httpx = "^0.27.0"
+python-dotenv = "^1.0.0"
+rich = "^13.7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

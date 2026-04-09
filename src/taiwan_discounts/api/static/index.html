@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台灣支付優惠聚合器</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "Noto Sans TC", sans-serif;
+      background: #f5f7fa;
+      color: #2d3748;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p { font-size: 0.85rem; opacity: 0.85; margin-top: 2px; }
+    .header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .btn-refresh { background: rgba(255,255,255,0.25); color: white; }
+    .btn-telegram { background: #229ED9; color: white; }
+    .btn-line { background: #00C300; color: white; }
+    .btn-select-all { background: rgba(255,255,255,0.2); color: white; font-size: 0.8rem; padding: 6px 14px; }
+
+    .controls {
+      background: white;
+      padding: 14px 24px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .controls label { font-size: 0.85rem; color: #718096; }
+    .controls input[type=range] { width: 120px; }
+    .controls select {
+      padding: 4px 8px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+    .filter-group { display: flex; align-items: center; gap: 8px; }
+    .filter-val { font-weight: 700; color: #667eea; min-width: 36px; }
+    .selected-count {
+      margin-left: auto;
+      font-size: 0.85rem;
+      color: #718096;
+    }
+    .selected-count strong { color: #667eea; }
+
+    main { max-width: 960px; margin: 0 auto; padding: 20px 16px; }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #4a5568;
+      margin: 20px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge {
+      background: #fed7d7;
+      color: #c53030;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-normal { background: #bee3f8; color: #2b6cb0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 16px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .card.selected { border-color: #667eea; background: #f0f4ff; }
+    .card.urgent { border-left: 4px solid #e53e3e; }
+
+    .card-platform {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: white;
+      background: #667eea;
+      padding: 2px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .card-platform.hami { background: #e53e3e; }
+    .card-platform.ipass { background: #38a169; }
+    .card-platform.linepay { background: #00C300; }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .card-discount {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #e53e3e;
+      margin-bottom: 6px;
+    }
+    .card-meta {
+      font-size: 0.78rem;
+      color: #718096;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .card-meta span { display: flex; align-items: center; gap: 3px; }
+    .urgent-tag {
+      background: #fed7d7;
+      color: #c53030;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+    .card-link {
+      font-size: 0.78rem;
+      color: #667eea;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 8px;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    .check-icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #cbd5e0;
+      border-radius: 4px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .card.selected .check-icon { background: #667eea; border-color: #667eea; color: white; }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #a0aec0;
+    }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
+    .loading-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+      background-size: 200%;
+      animation: loading 1.5s infinite;
+    }
+    @keyframes loading { 0% { background-position: 0%; } 100% { background-position: 200%; } }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #2d3748;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.success { background: #276749; }
+    .toast.error { background: #c53030; }
+
+    @media (max-width: 600px) {
+      header { padding: 14px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading-bar" class="loading-bar" style="display:none"></div>
+
+<header>
+  <div>
+    <h1>🏷️ 台灣支付優惠聚合器</h1>
+    <p>自動整理 Hami Point、悠游付、Line Pay 最值得搶的優惠</p>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-select-all" onclick="toggleSelectAll()">全選 / 取消</button>
+    <button class="btn btn-refresh" onclick="refresh()">🔄 重新爬取</button>
+    <button class="btn btn-telegram" onclick="notify('telegram')">📲 推播 Telegram</button>
+    <button class="btn btn-line" onclick="notify('line')">💬 推播 Line</button>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="filter-group">
+    <label>最低回饋 %</label>
+    <input type="range" id="min-cashback" min="0" max="30" value="5" step="1" oninput="updateFilter()">
+    <span class="filter-val" id="cashback-val">5%</span>
+  </div>
+  <div class="filter-group">
+    <label>平台</label>
+    <select id="platform-filter" onchange="renderDiscounts()">
+      <option value="">全部平台</option>
+      <option value="hami">Hami Point</option>
+      <option value="ipass">悠游付</option>
+      <option value="line">Line Pay</option>
+    </select>
+  </div>
+  <div class="selected-count">已選：<strong id="selected-count">0</strong> 筆</div>
+</div>
+
+<main>
+  <div id="content">
+    <div class="empty-state">
+      <div class="icon">⏳</div>
+      <div>載入中，正在爬取各平台優惠...</div>
+    </div>
+  </div>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script>
+  let allDiscounts = [];
+  let selectedIds = new Set();
+
+  async function loadDiscounts(forceRefresh = false) {
+    document.getElementById('loading-bar').style.display = 'block';
+    const minCashback = document.getElementById('min-cashback').value;
+    const platform = document.getElementById('platform-filter').value;
+    try {
+      const url = `/api/discounts?min_cashback=${minCashback}&platform=${platform}${forceRefresh ? '&force_refresh=true' : ''}`;
+      const resp = await fetch(url);
+      const data = await resp.json();
+      allDiscounts = data.all || [];
+      renderDiscounts();
+      if (data.errors && Object.keys(data.errors).length > 0) {
+        const errPlatforms = Object.keys(data.errors).join(', ');
+        showToast(`⚠️ 部分平台爬取失敗：${errPlatforms}`, 'error');
+      }
+    } catch (e) {
+      showToast('載入失敗，請稍後再試', 'error');
+    } finally {
+      document.getElementById('loading-bar').style.display = 'none';
+    }
+  }
+
+  function updateFilter() {
+    const val = document.getElementById('min-cashback').value;
+    document.getElementById('cashback-val').textContent = val + '%';
+    loadDiscounts();
+  }
+
+  function renderDiscounts() {
+    const platform = document.getElementById('platform-filter').value;
+    let discounts = allDiscounts;
+    if (platform) {
+      discounts = discounts.filter(d => d.platform.toLowerCase().includes(platform));
+    }
+
+    const urgent = discounts.filter(d => d.urgency_days !== null && d.urgency_days <= 3);
+    const normal = discounts.filter(d => !(d.urgency_days !== null && d.urgency_days <= 3));
+
+    let html = '';
+
+    if (urgent.length > 0) {
+      html += `<div class="section-title">⏰ 即將到期 <span class="badge">3天內 · ${urgent.length} 筆</span></div>`;
+      html += `<div class="grid">${urgent.map(renderCard).join('')}</div>`;
+    }
+
+    if (normal.length > 0) {
+      html += `<div class="section-title">💰 高折扣優惠 <span class="badge badge-normal">${normal.length} 筆</span></div>`;
+      html += `<div class="grid">${normal.map(renderCard).join('')}</div>`;
+    }
+
+    if (discounts.length === 0) {
+      html = `<div class="empty-state"><div class="icon">🎉</div><div>目前沒有符合條件的優惠<br>可以嘗試降低篩選門檻或重新爬取</div></div>`;
+    }
+
+    document.getElementById('content').innerHTML = html;
+    updateSelectedCount();
+  }
+
+  function renderCard(d) {
+    const isSelected = selectedIds.has(d.id);
+    const isUrgent = d.urgency_days !== null && d.urgency_days <= 3;
+    const platformClass = d.platform.toLowerCase().includes('hami') ? 'hami'
+                        : d.platform.toLowerCase().includes('ipass') ? 'ipass'
+                        : 'linepay';
+
+    const deadlineStr = d.deadline
+      ? (isUrgent ? `📅 ${new Date(d.deadline).toLocaleDateString('zh-TW', {month:'numeric',day:'numeric'})}（剩${d.urgency_days}天）`
+                  : `📅 ${new Date(d.deadline).toLocaleDateString('zh-TW', {month:'numeric',day:'numeric'})}`)
+      : '📅 長期活動';
+
+    return `
+      <div class="card ${isSelected ? 'selected' : ''} ${isUrgent ? 'urgent' : ''}"
+           onclick="toggleSelect('${d.id}', this)">
+        <div class="check-icon">${isSelected ? '✓' : ''}</div>
+        ${isUrgent ? `<div class="urgent-tag">🔥 剩${d.urgency_days}天</div>` : ''}
+        <div style="padding-left: 28px;">
+          <div class="card-platform ${platformClass}">${d.platform}</div>
+          <div class="card-title">${escHtml(d.title)}</div>
+          <div class="card-discount">${escHtml(d.discount_amount)}</div>
+          <div class="card-meta">
+            <span>${deadlineStr}</span>
+            <span>📂 ${d.category}</span>
+          </div>
+          <a class="card-link" href="${d.url}" target="_blank" onclick="event.stopPropagation()">查看詳情 →</a>
+        </div>
+      </div>`;
+  }
+
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function toggleSelect(id, cardEl) {
+    if (selectedIds.has(id)) {
+      selectedIds.delete(id);
+      cardEl.classList.remove('selected');
+      cardEl.querySelector('.check-icon').textContent = '';
+    } else {
+      selectedIds.add(id);
+      cardEl.classList.add('selected');
+      cardEl.querySelector('.check-icon').textContent = '✓';
+    }
+    updateSelectedCount();
+  }
+
+  function toggleSelectAll() {
+    const platform = document.getElementById('platform-filter').value;
+    let visible = allDiscounts;
+    if (platform) visible = visible.filter(d => d.platform.toLowerCase().includes(platform));
+
+    const allSelected = visible.every(d => selectedIds.has(d.id));
+    if (allSelected) {
+      visible.forEach(d => selectedIds.delete(d.id));
+    } else {
+      visible.forEach(d => selectedIds.add(d.id));
+    }
+    renderDiscounts();
+  }
+
+  function updateSelectedCount() {
+    document.getElementById('selected-count').textContent = selectedIds.size;
+  }
+
+  async function refresh() {
+    showToast('⏳ 正在重新爬取，請稍候（約 30-60 秒）...');
+    await fetch('/api/refresh', { method: 'POST' });
+    setTimeout(() => loadDiscounts(true), 5000);
+  }
+
+  async function notify(platform) {
+    const ids = selectedIds.size > 0 ? [...selectedIds] : null;
+    const count = ids ? ids.length : allDiscounts.length;
+    if (count === 0) { showToast('請先勾選要推播的優惠', 'error'); return; }
+
+    showToast(`📤 正在推播 ${count} 筆優惠...`);
+    try {
+      const resp = await fetch(`/api/notify/${platform}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ selected_ids: ids }),
+      });
+      const data = await resp.json();
+      if (resp.ok) {
+        showToast('✅ 推播成功！', 'success');
+      } else {
+        showToast(`❌ ${data.detail || '推播失敗'}`, 'error');
+      }
+    } catch (e) {
+      showToast('❌ 網路錯誤，請確認伺服器正在運行', 'error');
+    }
+  }
+
+  function showToast(msg, type = '') {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'toast' + (type ? ' ' + type : '');
+    void el.offsetWidth;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 3500);
+  }
+
+  // 頁面載入時自動取資料
+  loadDiscounts();
+</script>
+</body>
+</html>
