@@ -1,6 +1,6 @@
 """
 Hami Point 爬蟲
-目標：https://hamipayment.emome.net/campaign 及 https://hamipayment.emome.net/discount
+目標：https://hamipoint.cht.com.tw/promotion
 """
 import logging
 from playwright.async_api import Page
@@ -33,8 +33,8 @@ def guess_category(text: str) -> DiscountCategory:
 class HamiScraper(BaseScraper):
     platform = Platform.HAMI_POINT
     urls = [
-        "https://hamipayment.emome.net/campaign",
-        "https://hamipayment.emome.net/discount",
+        "https://hamipoint.cht.com.tw/promotion",
+        "https://hamipay.cht.com.tw/promotions.html",
     ]
 
     async def scrape(self, page: Page) -> list[Discount]:
@@ -47,17 +47,41 @@ class HamiScraper(BaseScraper):
         return discounts
 
     async def _scrape_page(self, page: Page, url: str) -> list[Discount]:
-        await page.goto(url, wait_until="networkidle", timeout=30000)
+        # 攔截 API 回應（hamipoint.cht.com.tw 是 Vue SPA，資料來自 XHR）
+        api_discounts = []
 
-        # 等待優惠卡片載入
-        # Hami 頁面結構因版本而異，嘗試多個 selector
+        async def handle_response(response):
+            if response.status == 200 and any(
+                kw in response.url for kw in ["/promotion", "/activity", "/campaign", "/api/"]
+            ):
+                try:
+                    ct = response.headers.get("content-type", "")
+                    if "json" in ct:
+                        data = await response.json()
+                        extracted = self._parse_api_response(data, url)
+                        api_discounts.extend(extracted)
+                except Exception:
+                    pass
+
+        page.on("response", handle_response)
+        await page.goto(url, wait_until="networkidle", timeout=30000)
+        await page.wait_for_timeout(2000)
+
+        if api_discounts:
+            logger.info(f"Hami API 攔截到 {len(api_discounts)} 筆")
+            return api_discounts
+
+        # 等待優惠卡片載入（hamipoint.cht.com.tw/promotion 的實際結構）
         selectors = [
+            "li.promotion-list__item",
+            ".promotion-item",
+            ".promotion-card",
+            "li[class*='promotion']",
+            "li[class*='promo']",
             ".campaign-item",
-            ".discount-item",
             ".activity-card",
-            ".promo-card",
-            "article.item",
-            ".card-item",
+            "article",
+            "li.item",
         ]
 
         cards = []
@@ -80,6 +104,47 @@ class HamiScraper(BaseScraper):
             except Exception as e:
                 logger.debug(f"Hami card parse error: {e}")
 
+        return discounts
+
+    def _parse_api_response(self, data, base_url: str) -> list[Discount]:
+        """嘗試從 JSON API 回應萃取優惠"""
+        items = []
+        # 嘗試常見的 JSON 結構
+        if isinstance(data, list):
+            items = data
+        elif isinstance(data, dict):
+            for key in ["data", "list", "items", "promotions", "activities", "result"]:
+                if isinstance(data.get(key), list):
+                    items = data[key]
+                    break
+
+        discounts = []
+        for item in items[:30]:
+            if not isinstance(item, dict):
+                continue
+            title = item.get("title") or item.get("name") or item.get("promotionName") or ""
+            if not title:
+                continue
+            desc = item.get("description") or item.get("content") or item.get("subtitle") or title
+            url = item.get("url") or item.get("link") or base_url
+            deadline_str = (
+                item.get("endDate") or item.get("end_date") or
+                item.get("endTime") or item.get("deadline") or ""
+            )
+            deadline = self.parse_deadline(str(deadline_str)) if deadline_str else None
+            combined = f"{title} {desc}"
+            discounts.append(Discount(
+                id=self.make_id(title),
+                title=str(title),
+                platform=self.platform,
+                discount_amount=str(desc)[:100],
+                discount_value_pct=self.parse_discount_pct(combined),
+                points_multiplier=self.parse_points_multiplier(combined),
+                deadline=deadline,
+                category=guess_category(combined),
+                conditions=[],
+                url=str(url),
+            ))
         return discounts
 
     async def _parse_card(self, card, base_url: str) -> Discount | None:

@@ -1,6 +1,6 @@
 """
 Line Pay 台灣爬蟲
-目標：https://pay.line.me/tw/promotions
+目標：https://event-pay.line.me/tw/
 """
 import logging
 from playwright.async_api import Page
@@ -31,7 +31,7 @@ def guess_category(text: str) -> DiscountCategory:
 
 class LinePayScraper(BaseScraper):
     platform = Platform.LINE_PAY
-    url = "https://pay.line.me/tw/promotions"
+    url = "https://event-pay.line.me/tw/"
 
     async def scrape(self, page: Page) -> list[Discount]:
         try:
@@ -48,14 +48,19 @@ class LinePayScraper(BaseScraper):
             await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             await page.wait_for_timeout(1000)
 
+        # event-pay.line.me/tw/ 的實際結構
         selectors = [
+            ".event-list__item",
+            ".event-item",
             ".promotion-item",
             ".campaign-card",
-            ".promo-card",
-            ".campaign-item",
-            ".event-item",
+            "[class*='eventList'] li",
+            "[class*='event-list'] li",
+            "[class*='EventList'] li",
             "[class*='promotion']",
             "[class*='campaign']",
+            "article",
+            "li.item",
         ]
 
         cards = []
