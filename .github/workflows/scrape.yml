@@ -1,0 +1,56 @@
+name: 爬取台灣支付優惠
+
+on:
+  schedule:
+    # 每天早上 8:00 和下午 6:00 台灣時間（UTC+8）執行
+    - cron: "0 0,10 * * *"
+  workflow_dispatch:  # 也可以手動在 GitHub 頁面點「Run workflow」觸發
+
+permissions:
+  contents: write   # 需要寫入 discounts.json 到 repo
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 安裝依賴
+        run: |
+          pip install poetry
+          poetry config virtualenvs.create false
+          poetry install --no-interaction
+
+      - name: 安裝 Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: 執行爬蟲並儲存結果
+        env:
+          PLAYWRIGHT_HEADLESS: "true"
+          SCRAPE_TIMEOUT_MS: "30000"
+          MIN_CASHBACK_PCT: ${{ vars.MIN_CASHBACK_PCT || '5' }}
+          MIN_DISCOUNT_PCT: ${{ vars.MIN_DISCOUNT_PCT || '20' }}
+          MIN_POINTS_MULTIPLIER: ${{ vars.MIN_POINTS_MULTIPLIER || '3' }}
+          NOTIFY_MODE: ${{ vars.NOTIFY_MODE || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
+        run: python scripts/scrape_and_save.py
+
+      - name: 把結果 commit 回 repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/discounts.json
+          # 如果沒有變更就不 commit（避免空 commit）
+          git diff --cached --quiet || git commit -m "chore: update discounts $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push

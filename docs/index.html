@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>今日必搶優惠</title>
+  <style>
+    :root {
+      --purple: #6c63ff;
+      --red: #e53e3e;
+      --green: #38a169;
+      --bg: #f4f6fb;
+      --card: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, "Noto Sans TC", sans-serif; background: var(--bg); color: #2d3748; }
+
+    header {
+      background: linear-gradient(135deg, #6c63ff, #a855f7);
+      color: #fff;
+      padding: 18px 16px 14px;
+      position: sticky; top: 0; z-index: 10;
+      box-shadow: 0 2px 12px rgba(108,99,255,.25);
+    }
+    header h1 { font-size: 1.15rem; font-weight: 800; }
+    .updated { font-size: 0.72rem; opacity: .75; margin-top: 2px; }
+
+    .tabs {
+      display: flex;
+      background: #fff;
+      border-bottom: 2px solid #e9ecef;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      flex: none;
+      padding: 10px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #718096;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all .15s;
+    }
+    .tab.active { color: var(--purple); border-bottom-color: var(--purple); }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      background: #fff;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .chip {
+      flex: none;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1.5px solid #cbd5e0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #718096;
+      background: #fff;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .chip.active { background: var(--purple); color: #fff; border-color: var(--purple); }
+
+    main { padding: 12px 14px 80px; }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin: 14px 0 8px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      border-left: 4px solid transparent;
+      position: relative;
+      transition: transform .12s;
+    }
+    .card:active { transform: scale(.98); }
+    .card.urgent { border-left-color: var(--red); }
+    .card.normal { border-left-color: var(--purple); }
+
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .platform-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .badge-hami    { background: #e53e3e; }
+    .badge-ipass   { background: #38a169; }
+    .badge-linepay { background: #00b900; }
+
+    .urgent-chip {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #fff5f5;
+      color: var(--red);
+      border: 1px solid #feb2b2;
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .card-title { font-size: 0.92rem; font-weight: 700; margin: 8px 0 4px; line-height: 1.4; }
+    .card-discount { font-size: 1.15rem; font-weight: 800; color: var(--red); }
+
+    .card-meta {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 8px;
+      font-size: 0.75rem; color: #718096;
+    }
+    .card-meta span { display: flex; align-items: center; gap: 3px; }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--purple);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: #a0aec0;
+    }
+    .empty .icon { font-size: 2.8rem; margin-bottom: 10px; }
+
+    .loading-wave {
+      display: flex; justify-content: center; align-items: center;
+      gap: 6px; padding: 60px 0;
+    }
+    .loading-wave span {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--purple); opacity: .6;
+      animation: wave 1.2s ease-in-out infinite;
+    }
+    .loading-wave span:nth-child(2) { animation-delay: .2s; }
+    .loading-wave span:nth-child(3) { animation-delay: .4s; }
+    @keyframes wave { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+    .fab {
+      position: fixed; bottom: 20px; right: 16px;
+      display: flex; flex-direction: column; gap: 10px;
+      z-index: 20;
+    }
+    .fab-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: none;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .15s;
+    }
+    .fab-btn:active { transform: scale(.92); }
+    .fab-tg  { background: #229ED9; }
+    .fab-line { background: #00b900; }
+    .fab-ref { background: var(--purple); }
+
+    .toast {
+      position: fixed; bottom: 88px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: #2d3748; color: #fff;
+      padding: 10px 20px; border-radius: 10px;
+      font-size: 0.85rem; font-weight: 600;
+      opacity: 0; transition: all .3s; z-index: 30; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast.ok { background: #276749; }
+    .toast.err { background: #c53030; }
+
+    .stats {
+      display: flex; gap: 10px; margin-bottom: 4px;
+    }
+    .stat-box {
+      flex: 1; background: #fff; border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.05);
+      text-align: center;
+    }
+    .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--purple); }
+    .stat-label { font-size: 0.72rem; color: #a0aec0; margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🏷️ 今日必搶優惠</h1>
+  <div class="updated" id="updated">載入中...</div>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="setTab('all', this)">全部</div>
+  <div class="tab" onclick="setTab('urgent', this)">🔥 快到期</div>
+  <div class="tab" onclick="setTab('hami', this)">Hami</div>
+  <div class="tab" onclick="setTab('ipass', this)">悠游付</div>
+  <div class="tab" onclick="setTab('line', this)">Line Pay</div>
+</div>
+
+<div class="filter-bar">
+  <div class="chip active" onclick="setCategory('', this)">全部類別</div>
+  <div class="chip" onclick="setCategory('超商/超市', this)">超商/超市</div>
+  <div class="chip" onclick="setCategory('餐飲', this)">餐飲</div>
+  <div class="chip" onclick="setCategory('購物', this)">購物</div>
+  <div class="chip" onclick="setCategory('交通', this)">交通</div>
+  <div class="chip" onclick="setCategory('加油', this)">加油</div>
+  <div class="chip" onclick="setCategory('其他', this)">其他</div>
+</div>
+
+<main id="main">
+  <div class="loading-wave"><span></span><span></span><span></span></div>
+</main>
+
+<div class="fab">
+  <button class="fab-btn fab-ref" title="重新整理" onclick="reload()">🔄</button>
+  <button class="fab-btn fab-tg"  title="推播 Telegram" onclick="notify('telegram')">✈️</button>
+  <button class="fab-btn fab-line" title="推播 Line" onclick="notify('line')">💬</button>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+  // discounts.json 和 index.html 在同一個 docs/ 資料夾
+  const JSON_URL = "./discounts.json";
+
+  let all = [], tab = "all", category = "";
+
+  async function load() {
+    try {
+      const r = await fetch(JSON_URL + "?t=" + Date.now());
+      const data = await r.json();
+      all = data.discounts || [];
+      const upd = new Date(data.updated_at);
+      document.getElementById("updated").textContent =
+        "更新時間：" + upd.toLocaleString("zh-TW", {month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+      render();
+    } catch (e) {
+      document.getElementById("main").innerHTML =
+        `<div class="empty"><div class="icon">😵</div><div>載入失敗<br><small>請確認 GitHub Actions 已執行過一次</small></div></div>`;
+    }
+  }
+
+  function filtered() {
+    let list = all;
+    if (tab === "urgent") list = list.filter(d => d.urgency_days !== null && d.urgency_days !== undefined && d.urgency_days <= 3);
+    else if (tab !== "all") list = list.filter(d => d.platform.toLowerCase().includes(tab));
+    if (category) list = list.filter(d => d.category === category);
+    return list;
+  }
+
+  function render() {
+    const list = filtered();
+    const urgent = list.filter(d => d.urgency_days !== null && d.urgency_days !== undefined && d.urgency_days <= 3);
+    const normal = list.filter(d => !(d.urgency_days !== null && d.urgency_days !== undefined && d.urgency_days <= 3));
+
+    let html = `<div class="stats">
+      <div class="stat-box"><div class="stat-num">${all.length}</div><div class="stat-label">總優惠數</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#e53e3e">${all.filter(d=>d.urgency_days<=3&&d.urgency_days!==null).length}</div><div class="stat-label">即將到期</div></div>
+      <div class="stat-box"><div class="stat-num">${list.length}</div><div class="stat-label">目前篩選</div></div>
+    </div>`;
+
+    if (list.length === 0) {
+      html += `<div class="empty"><div class="icon">🎯</div><div>這個分類目前沒有符合的優惠</div></div>`;
+    } else {
+      if (urgent.length && tab !== "urgent") {
+        html += `<div class="section-label">⏰ 即將到期（${urgent.length} 筆）</div>`;
+        html += urgent.map(cardHtml).join("");
+      }
+      if (normal.length) {
+        html += `<div class="section-label">💰 高折扣優惠（${normal.length} 筆）</div>`;
+        html += normal.map(cardHtml).join("");
+      }
+      if (tab === "urgent") {
+        html = `<div class="stats">${html.match(/<div class="stats">[\s\S]*?<\/div><\/div><\/div>/)?.[0] || ""}</div>`;
+        html = `<div class="stats">
+          <div class="stat-box"><div class="stat-num">${all.length}</div><div class="stat-label">總優惠數</div></div>
+          <div class="stat-box"><div class="stat-num" style="color:#e53e3e">${urgent.length}</div><div class="stat-label">即將到期</div></div>
+          <div class="stat-box"><div class="stat-num">${list.length}</div><div class="stat-label">目前篩選</div></div>
+        </div>`;
+        html += list.map(cardHtml).join("");
+      }
+    }
+
+    document.getElementById("main").innerHTML = html;
+  }
+
+  function cardHtml(d) {
+    const isUrgent = d.urgency_days !== null && d.urgency_days !== undefined && d.urgency_days <= 3;
+    const platformKey = d.platform.toLowerCase().includes("hami") ? "hami"
+                      : d.platform.toLowerCase().includes("ipass") ? "ipass" : "linepay";
+    const deadStr = d.deadline
+      ? (isUrgent
+          ? `📅 ${fmtDate(d.deadline)} <span style="color:var(--red);font-weight:700">剩${d.urgency_days}天</span>`
+          : `📅 ${fmtDate(d.deadline)}`)
+      : "📅 長期活動";
+
+    return `<div class="card ${isUrgent ? 'urgent' : 'normal'}">
+      <div class="card-header">
+        <span class="platform-badge badge-${platformKey}">${d.platform}</span>
+        ${isUrgent ? `<span class="urgent-chip">🔥 剩${d.urgency_days}天</span>` : ""}
+      </div>
+      <div class="card-title">${esc(d.title)}</div>
+      <div class="card-discount">${esc(d.discount_amount)}</div>
+      <div class="card-meta">
+        <span>${deadStr}</span>
+        <span>📂 ${d.category}</span>
+      </div>
+      <a class="card-link" href="${esc(d.url)}" target="_blank" rel="noopener">查看詳情 →</a>
+    </div>`;
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    return `${d.getMonth()+1}/${d.getDate()}`;
+  }
+
+  function esc(s) {
+    return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  function setTab(t, el) {
+    tab = t;
+    document.querySelectorAll(".tab").forEach(e => e.classList.remove("active"));
+    el.classList.add("active");
+    render();
+  }
+
+  function setCategory(c, el) {
+    category = c;
+    document.querySelectorAll(".chip").forEach(e => e.classList.remove("active"));
+    el.classList.add("active");
+    render();
+  }
+
+  function reload() {
+    document.getElementById("main").innerHTML = '<div class="loading-wave"><span></span><span></span><span></span></div>';
+    load();
+    toast("🔄 重新載入中...");
+  }
+
+  async function notify(platform) {
+    // 靜態頁面無法直接呼叫後端，提示使用者手動觸發 Actions
+    if (platform === "telegram") {
+      toast("📲 請至 GitHub Actions 手動觸發，或等下次排程", "ok");
+    } else {
+      toast("💬 請至 GitHub Actions 手動觸發，或等下次排程", "ok");
+    }
+  }
+
+  function toast(msg, type = "") {
+    const el = document.getElementById("toast");
+    el.textContent = msg;
+    el.className = "toast" + (type ? " " + type : "");
+    void el.offsetWidth;
+    el.classList.add("show");
+    setTimeout(() => el.classList.remove("show"), 3000);
+  }
+
+  load();
+</script>
+</body>
+</html>
