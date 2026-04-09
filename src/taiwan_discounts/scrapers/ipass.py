@@ -1,6 +1,6 @@
 """
-iPASS 悠游付爬蟲
-目標：https://www.ipass.com.tw/活動優惠 及相關頁面
+iPASS 一卡通爬蟲
+目標：https://www.i-pass.com.tw/Preferential
 """
 import logging
 from playwright.async_api import Page
@@ -32,8 +32,8 @@ def guess_category(text: str) -> DiscountCategory:
 class IpassScraper(BaseScraper):
     platform = Platform.IPASS
     urls = [
-        "https://www.ipass.com.tw/活動優惠/",
-        "https://www.ipass.com.tw/campaign/",
+        "https://www.i-pass.com.tw/Preferential?type=0",
+        "https://www.i-pass.com.tw/Preferential?type=1",
     ]
 
     async def scrape(self, page: Page) -> list[Discount]:
@@ -48,13 +48,16 @@ class IpassScraper(BaseScraper):
     async def _scrape_page(self, page: Page, url: str) -> list[Discount]:
         await page.goto(url, wait_until="networkidle", timeout=30000)
 
-        # 嘗試多種 selector
+        # i-pass.com.tw/Preferential 的實際結構
         selectors = [
-            ".campaign-item",
+            ".preferential-item",
+            ".preferential__item",
+            "li.preferential",
             ".activity-item",
             ".promo-item",
             ".event-card",
-            ".card",
+            "[class*='preferential']",
+            "[class*='Preferential']",
             "article",
             "li.item",
         ]
