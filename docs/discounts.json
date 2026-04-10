@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-09T12:10:07.460496+00:00",
-  "total": 6,
+  "updated_at": "2026-04-10T06:26:16.434927+00:00",
+  "total": 9,
   "errors": {},
   "discounts": [
     {
@@ -30,6 +30,34 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "30.0"
+    },
+    {
+      "id": "693c9d9c99f3",
+      "title": "【自動加值 20% 回饋】新申辦第一銀行一卡通聯名卡，享自動加值 20% 回饋",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【自動加值 20% 回饋】新申辦第一銀行一卡通聯名卡，享自動加值 20% 回饋",
+      "discount_value_pct": "20",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
+      "urgency_days": null,
+      "value_score": "20"
+    },
+    {
+      "id": "dbfe8bdd5b5a",
+      "title": "購物賺點大侑春日好感生活10%",
+      "platform": "Hami Point",
+      "discount_amount": "購物賺點大侑春日好感生活10%",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "購物",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
     },
     {
       "id": "e0824661b212",
@@ -78,6 +106,20 @@
       "title": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
       "platform": "iPASS 悠游付",
       "discount_amount": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "繳費",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=0",
+      "urgency_days": null,
+      "value_score": "5"
+    },
+    {
+      "id": "92d2a94836af",
+      "title": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
       "discount_value_pct": "5",
       "points_multiplier": null,
       "deadline": null,
