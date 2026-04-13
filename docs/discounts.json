@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-12T11:49:51.610144+00:00",
-  "total": 6,
+  "updated_at": "2026-04-13T07:27:16.759102+00:00",
+  "total": 8,
   "errors": {},
   "discounts": [
     {
@@ -84,6 +84,34 @@
       "category": "其他",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "5"
+    },
+    {
+      "id": "9e613b9d5f58",
+      "title": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "繳費",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=0",
+      "urgency_days": null,
+      "value_score": "5"
+    },
+    {
+      "id": "92d2a94836af",
+      "title": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "繳費",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
       "value_score": "5"
     }
