@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-14T15:04:05.461249+00:00",
-  "total": 8,
+  "updated_at": "2026-04-15T06:21:04.553433+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -30,20 +30,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "30.0"
-    },
-    {
-      "id": "dbfe8bdd5b5a",
-      "title": "購物賺點大侑春日好感生活10%",
-      "platform": "Hami Point",
-      "discount_amount": "購物賺點大侑春日好感生活10%",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "購物",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "10"
     },
     {
       "id": "e0824661b212",
