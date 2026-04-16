@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-15T14:54:55.129777+00:00",
-  "total": 7,
+  "updated_at": "2026-04-16T06:23:08.444539+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -16,20 +16,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "511117309c7e",
-      "title": "【票券館】快樂兒童節，一起FUN開心-熱銷7折起",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】快樂兒童節，一起FUN開心-熱銷7折起",
-      "discount_value_pct": "30.0",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "娛樂",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "30.0"
     },
     {
       "id": "e0824661b212",
