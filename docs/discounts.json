@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-20T15:06:30.894264+00:00",
-  "total": 6,
+  "updated_at": "2026-04-21T06:24:07.521450+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -16,6 +16,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "da3cb33ce844",
+      "title": "馨意贈點 嚴選品牌最高12.5%",
+      "platform": "Hami Point",
+      "discount_amount": "馨意贈點 嚴選品牌最高12.5%",
+      "discount_value_pct": "12.5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "12.5"
     },
     {
       "id": "e0824661b212",
