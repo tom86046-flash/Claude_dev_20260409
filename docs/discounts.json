@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-30T01:31:09.034492+00:00",
-  "total": 8,
+  "updated_at": "2026-04-30T11:22:18.749468+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -50,20 +50,6 @@
       "title": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
       "platform": "iPASS 悠游付",
       "discount_amount": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=1",
-      "urgency_days": null,
-      "value_score": "10"
-    },
-    {
-      "id": "a3783723af0f",
-      "title": "誠品生活使用一卡通滿額享 10% 回饋 !",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "誠品生活使用一卡通滿額享 10% 回饋 !",
       "discount_value_pct": "10",
       "points_multiplier": null,
       "deadline": null,
