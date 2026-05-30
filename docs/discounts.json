@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-29T12:38:42.569892+00:00",
-  "total": 4,
+  "updated_at": "2026-05-30T01:51:04.851724+00:00",
+  "total": 2,
   "errors": {},
   "discounts": [
     {
@@ -30,34 +30,6 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "10"
-    },
-    {
-      "id": "9e613b9d5f58",
-      "title": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "繳費",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "5"
-    },
-    {
-      "id": "92d2a94836af",
-      "title": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "繳費",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "5"
     }
   ]
 }
