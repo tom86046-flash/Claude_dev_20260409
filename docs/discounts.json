@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-02T13:45:58.744671+00:00",
-  "total": 7,
+  "updated_at": "2026-06-03T02:29:50.802098+00:00",
+  "total": 8,
   "errors": {},
   "discounts": [
     {
@@ -30,6 +30,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "15"
+    },
+    {
+      "id": "fc79975c05d9",
+      "title": "【票券館】7-ELEVEN虛擬商品卡-刷卡最高10%回饋",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】7-ELEVEN虛擬商品卡-刷卡最高10%回饋",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "超商/超市",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
     },
     {
       "id": "14ca1f6c4d9b",
