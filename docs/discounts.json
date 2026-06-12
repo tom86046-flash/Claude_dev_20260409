@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-11T13:47:05.999589+00:00",
-  "total": 8,
+  "updated_at": "2026-06-12T02:08:24.244711+00:00",
+  "total": 9,
   "errors": {},
   "discounts": [
     {
@@ -16,6 +16,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "978c3c1f8627",
+      "title": "【首次消費】用 iPASS MONEY 首次消費最高享 20% 回饋",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【首次消費】用 iPASS MONEY 首次消費最高享 20% 回饋",
+      "discount_value_pct": "20",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=0",
+      "urgency_days": null,
+      "value_score": "20"
     },
     {
       "id": "849d0f0f0da5",
