@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-18T02:12:56.469852+00:00",
-  "total": 8,
+  "updated_at": "2026-06-19T02:41:01.457428+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -16,20 +16,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "849d0f0f0da5",
-      "title": "【VIP購省館】指定商品買1送1，刷卡金最高15%回饋",
-      "platform": "Hami Point",
-      "discount_amount": "【VIP購省館】指定商品買1送1，刷卡金最高15%回饋",
-      "discount_value_pct": "15",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "15"
     },
     {
       "id": "fa35e6dc04dc",
