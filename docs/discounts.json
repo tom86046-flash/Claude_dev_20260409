@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-21T12:03:50.732741+00:00",
-  "total": 7,
+  "updated_at": "2026-06-22T02:28:46.720672+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -16,20 +16,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "fa35e6dc04dc",
-      "title": "夏日點購祭熱門品牌10%回饋",
-      "platform": "Hami Point",
-      "discount_amount": "夏日點購祭熱門品牌10%回饋",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "10"
     },
     {
       "id": "14ca1f6c4d9b",
