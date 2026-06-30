@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-30T01:59:45.669248+00:00",
+  "updated_at": "2026-06-30T12:04:01.657404+00:00",
   "total": 6,
   "errors": {},
   "discounts": [
     {
-      "id": "8ca37c338f7a",
-      "title": "【週三小確幸】2026年4~6月熱門商品🔥限量5折起(週三11:00開放)",
+      "id": "7b6be6876497",
+      "title": "【週三小確幸】2026年7~9月熱門商品🔥限量5折起(週三11:00開放)",
       "platform": "Hami Point",
-      "discount_amount": "【週三小確幸】2026年4~6月熱門商品🔥限量5折起(週三11:00開放)",
+      "discount_amount": "【週三小確幸】2026年7~9月熱門商品🔥限量5折起(週三11:00開放)",
       "discount_value_pct": "50.0",
       "points_multiplier": null,
       "deadline": null,
@@ -74,10 +74,10 @@
       "value_score": "5"
     },
     {
-      "id": "84a5e7825d92",
-      "title": "一卡通聯名卡自動加值，享 5% 回饋！",
+      "id": "88dfa175a9e3",
+      "title": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
       "platform": "iPASS 悠游付",
-      "discount_amount": "一卡通聯名卡自動加值，享 5% 回饋！",
+      "discount_amount": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
       "discount_value_pct": "5",
       "points_multiplier": null,
       "deadline": null,
