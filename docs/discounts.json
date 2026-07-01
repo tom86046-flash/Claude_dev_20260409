@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-30T12:04:01.657404+00:00",
-  "total": 6,
+  "updated_at": "2026-07-01T02:05:08.222651+00:00",
+  "total": 3,
   "errors": {},
   "discounts": [
     {
@@ -18,72 +18,30 @@
       "value_score": "50.0"
     },
     {
-      "id": "14ca1f6c4d9b",
-      "title": "用 iPASS MONEY 消費，最高享 10% 回饋！",
+      "id": "e6fae0207cd7",
+      "title": "【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
       "platform": "iPASS 悠游付",
-      "discount_amount": "用 iPASS MONEY 消費，最高享 10% 回饋！",
-      "discount_value_pct": "10",
+      "discount_amount": "【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
+      "discount_value_pct": "15",
       "points_multiplier": null,
       "deadline": null,
       "category": "其他",
       "conditions": [],
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
-      "value_score": "10"
+      "value_score": "15"
     },
     {
-      "id": "cc1344312516",
-      "title": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=1",
-      "urgency_days": null,
-      "value_score": "10"
-    },
-    {
-      "id": "9e613b9d5f58",
-      "title": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【生活繳費】首次使用 iPASS MONEY APP 生活繳費，輕鬆享 5% 回饋",
+      "id": "d300437c6c97",
+      "title": "【票券館】每日10:00瘋搶5%回饋券！持券者限取得票券當日刷卡消費享5%回饋，每人每日最高回饋100點。",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】每日10:00瘋搶5%回饋券！持券者限取得票券當日刷卡消費享5%回饋，每人每日最高回饋100點。",
       "discount_value_pct": "5",
       "points_multiplier": null,
       "deadline": null,
-      "category": "繳費",
+      "category": "娛樂",
       "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "5"
-    },
-    {
-      "id": "92d2a94836af",
-      "title": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【生活繳費】當月繳費任 1 筆，樂享消費 5% 回饋！指定銀行再加碼！",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "繳費",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "5"
-    },
-    {
-      "id": "88dfa175a9e3",
-      "title": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=1",
+      "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "5"
     }
