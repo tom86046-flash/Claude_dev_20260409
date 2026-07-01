@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-01T02:05:08.222651+00:00",
-  "total": 3,
+  "updated_at": "2026-07-01T12:26:36.615588+00:00",
+  "total": 5,
   "errors": {},
   "discounts": [
     {
@@ -32,6 +32,20 @@
       "value_score": "15"
     },
     {
+      "id": "3ed2f0152316",
+      "title": "享樂生活節限時10%回饋",
+      "platform": "Hami Point",
+      "discount_amount": "享樂生活節限時10%回饋",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
+    },
+    {
       "id": "d300437c6c97",
       "title": "【票券館】每日10:00瘋搶5%回饋券！持券者限取得票券當日刷卡消費享5%回饋，每人每日最高回饋100點。",
       "platform": "Hami Point",
@@ -42,6 +56,20 @@
       "category": "娛樂",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "5"
+    },
+    {
+      "id": "88dfa175a9e3",
+      "title": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【好評延長】一卡通聯名卡自動加值，享 5% 回饋！",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "5"
     }
