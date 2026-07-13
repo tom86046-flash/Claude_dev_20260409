@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-12T11:03:55.473072+00:00",
-  "total": 6,
+  "updated_at": "2026-07-13T01:22:09.585950+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -70,6 +70,20 @@
       "category": "其他",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
+    },
+    {
+      "id": "516249b48cbe",
+      "title": "一卡通聯名卡自動加值，享 10% 回饋！ 不限通路消費再享 5% 回饋！",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "一卡通聯名卡自動加值，享 10% 回饋！ 不限通路消費再享 5% 回饋！",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "10"
     },
