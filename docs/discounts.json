@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-15T01:08:41.787561+00:00",
-  "total": 6,
+  "updated_at": "2026-07-15T11:19:04.253933+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -44,6 +44,20 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
       "value_score": "15"
+    },
+    {
+      "id": "5fa61bfbd686",
+      "title": "FUN暑假旅遊品牌最高10%",
+      "platform": "Hami Point",
+      "discount_amount": "FUN暑假旅遊品牌最高10%",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
     },
     {
       "id": "3ed2f0152316",
