@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-15T11:19:04.253933+00:00",
-  "total": 7,
+  "updated_at": "2026-07-16T01:17:38.402892+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -18,14 +18,14 @@
       "value_score": "50.0"
     },
     {
-      "id": "3795113cd29c",
-      "title": "【票券館】知名飯店餐廳BUFFET吃到飽 熱銷優惠8折起",
+      "id": "ef6ea6d1dfc4",
+      "title": "【票券館】暑假出國好幫手 接送停車好方便-商品優惠8折起",
       "platform": "Hami Point",
-      "discount_amount": "【票券館】知名飯店餐廳BUFFET吃到飽 熱銷優惠8折起",
+      "discount_amount": "【票券館】暑假出國好幫手 接送停車好方便-商品優惠8折起",
       "discount_value_pct": "20.0",
       "points_multiplier": null,
       "deadline": null,
-      "category": "餐飲",
+      "category": "娛樂",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
@@ -50,20 +50,6 @@
       "title": "FUN暑假旅遊品牌最高10%",
       "platform": "Hami Point",
       "discount_amount": "FUN暑假旅遊品牌最高10%",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "10"
-    },
-    {
-      "id": "3ed2f0152316",
-      "title": "享樂生活節限時10%回饋",
-      "platform": "Hami Point",
-      "discount_amount": "享樂生活節限時10%回饋",
       "discount_value_pct": "10",
       "points_multiplier": null,
       "deadline": null,
