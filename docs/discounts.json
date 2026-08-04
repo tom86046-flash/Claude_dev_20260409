@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-04T01:17:56.737779+00:00",
-  "total": 6,
+  "updated_at": "2026-08-04T11:53:01.457463+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -72,6 +72,20 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "10"
+    },
+    {
+      "id": "da7e62af76c3",
+      "title": "週三神回饋 x 神腦生活全站最高8%！",
+      "platform": "Hami Point",
+      "discount_amount": "週三神回饋 x 神腦生活全站最高8%！",
+      "discount_value_pct": "8",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "8"
     },
     {
       "id": "d300437c6c97",
