@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-13T10:49:53.281169+00:00",
-  "total": 7,
+  "updated_at": "2026-08-14T00:52:32.775679+00:00",
+  "total": 8,
   "errors": {},
   "discounts": [
     {
@@ -16,6 +16,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "f716db8d3430",
+      "title": "週五樂翻天最高16%",
+      "platform": "Hami Point",
+      "discount_amount": "週五樂翻天最高16%",
+      "discount_value_pct": "16",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "16"
     },
     {
       "id": "e6fae0207cd7",
