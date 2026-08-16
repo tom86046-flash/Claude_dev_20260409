@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-15T10:10:17.348723+00:00",
-  "total": 7,
+  "updated_at": "2026-08-16T00:30:54.163257+00:00",
+  "total": 9,
   "errors": {},
   "discounts": [
     {
@@ -16,6 +16,34 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "4f8378363741",
+      "title": "【票券館】暑假玩翻天，室內樂園不怕曬-限時優惠7折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】暑假玩翻天，室內樂園不怕曬-限時優惠7折起",
+      "discount_value_pct": "30.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "30.0"
+    },
+    {
+      "id": "34a7cb025ebe",
+      "title": "【票券館】夏日饗宴，豪華美味無限-限時優惠7折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】夏日饗宴，豪華美味無限-限時優惠7折起",
+      "discount_value_pct": "30.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "30.0"
     },
     {
       "id": "f716db8d3430",
