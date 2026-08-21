@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T00:31:30.737674+00:00",
+  "updated_at": "2026-08-21T10:17:50.971645+00:00",
   "total": 9,
   "errors": {},
   "discounts": [
@@ -60,10 +60,10 @@
       "value_score": "16"
     },
     {
-      "id": "e6fae0207cd7",
-      "title": "【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
+      "id": "826724c302f7",
+      "title": "[優惠二回饋上限已於2026/8/21 15:50 額滿 ]【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
       "platform": "iPASS 悠游付",
-      "discount_amount": "【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
+      "discount_amount": "[優惠二回饋上限已於2026/8/21 15:50 額滿 ]【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
       "discount_value_pct": "15",
       "points_multiplier": null,
       "deadline": null,
