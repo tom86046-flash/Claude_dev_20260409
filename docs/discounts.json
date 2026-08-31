@@ -1,8 +1,22 @@
 {
-  "updated_at": "2026-08-31T01:51:21.822808+00:00",
-  "total": 10,
+  "updated_at": "2026-08-31T17:16:28.818316+00:00",
+  "total": 9,
   "errors": {},
   "discounts": [
+    {
+      "id": "8be451ba9214",
+      "title": "【票券館】秋日換季保養，舒壓按摩好放鬆-熱銷優惠5折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】秋日換季保養，舒壓按摩好放鬆-熱銷優惠5折起",
+      "discount_value_pct": "50.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "50.0"
+    },
     {
       "id": "7b6be6876497",
       "title": "【週三小確幸】2026年7~9月熱門商品🔥限量5折起(週三11:00開放)",
@@ -16,48 +30,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "4f8378363741",
-      "title": "【票券館】暑假玩翻天，室內樂園不怕曬-限時優惠7折起",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】暑假玩翻天，室內樂園不怕曬-限時優惠7折起",
-      "discount_value_pct": "30.0",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "娛樂",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "30.0"
-    },
-    {
-      "id": "34a7cb025ebe",
-      "title": "【票券館】夏日饗宴，豪華美味無限-限時優惠7折起",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】夏日饗宴，豪華美味無限-限時優惠7折起",
-      "discount_value_pct": "30.0",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "娛樂",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "30.0"
-    },
-    {
-      "id": "f716db8d3430",
-      "title": "週五樂翻天最高16%",
-      "platform": "Hami Point",
-      "discount_amount": "週五樂翻天最高16%",
-      "discount_value_pct": "16",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "16"
     },
     {
       "id": "826724c302f7",
@@ -114,6 +86,20 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "10"
+    },
+    {
+      "id": "4342504ab11d",
+      "title": "預告)中華門市消費最高8%再抽5000點",
+      "platform": "Hami Point",
+      "discount_amount": "預告)中華門市消費最高8%再抽5000點",
+      "discount_value_pct": "8",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "8"
     },
     {
       "id": "da7e62af76c3",
