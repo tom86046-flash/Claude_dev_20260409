@@ -1,8 +1,22 @@
 {
-  "updated_at": "2026-09-01T02:14:17.437235+00:00",
-  "total": 9,
+  "updated_at": "2026-09-01T14:21:48.005625+00:00",
+  "total": 10,
   "errors": {},
   "discounts": [
+    {
+      "id": "109a24717348",
+      "title": "【99開學購物節】買就抽iPad Air、點數回饋狂飆99%",
+      "platform": "Hami Point",
+      "discount_amount": "【99開學購物節】買就抽iPad Air、點數回饋狂飆99%",
+      "discount_value_pct": "99",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "購物",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "99"
+    },
     {
       "id": "8be451ba9214",
       "title": "【票券館】秋日換季保養，舒壓按摩好放鬆-熱銷優惠5折起",
