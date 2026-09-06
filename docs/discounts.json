@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-05T13:04:53.823883+00:00",
-  "total": 11,
+  "updated_at": "2026-09-06T01:30:29.138189+00:00",
+  "total": 12,
   "errors": {},
   "discounts": [
     {
@@ -72,6 +72,20 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
       "value_score": "15"
+    },
+    {
+      "id": "3bd529c32f3f",
+      "title": "【票券館】四大超商-刷卡最高10%回饋，最高回饋100點",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】四大超商-刷卡最高10%回饋，最高回饋100點",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "超商/超市",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
     },
     {
       "id": "2b9c6905fbb4",
