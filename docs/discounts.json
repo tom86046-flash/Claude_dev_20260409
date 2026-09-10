@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-09T14:00:08.226892+00:00",
-  "total": 12,
+  "updated_at": "2026-09-10T01:41:10.447649+00:00",
+  "total": 11,
   "errors": {},
   "discounts": [
     {
@@ -116,24 +116,10 @@
       "value_score": "10"
     },
     {
-      "id": "b04806cce596",
-      "title": "【票券館】99購物節-全站刷卡享9%回饋，最高回饋100點",
+      "id": "0aa21ec16829",
+      "title": "中華門市消費最高8%再抽5000點",
       "platform": "Hami Point",
-      "discount_amount": "【票券館】99購物節-全站刷卡享9%回饋，最高回饋100點",
-      "discount_value_pct": "9",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "購物",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "9"
-    },
-    {
-      "id": "4342504ab11d",
-      "title": "預告)中華門市消費最高8%再抽5000點",
-      "platform": "Hami Point",
-      "discount_amount": "預告)中華門市消費最高8%再抽5000點",
+      "discount_amount": "中華門市消費最高8%再抽5000點",
       "discount_value_pct": "8",
       "points_multiplier": null,
       "deadline": null,
