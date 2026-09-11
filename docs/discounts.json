@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T01:40:28.897341+00:00",
+  "updated_at": "2026-09-11T13:55:20.144355+00:00",
   "total": 11,
   "errors": {},
   "discounts": [
@@ -116,10 +116,10 @@
       "value_score": "10"
     },
     {
-      "id": "0aa21ec16829",
-      "title": "中華門市消費最高8%再抽5000點",
+      "id": "220fc8c6bc2c",
+      "title": "中華電信門市消費最高8%再抽5000點",
       "platform": "Hami Point",
-      "discount_amount": "中華門市消費最高8%再抽5000點",
+      "discount_amount": "中華電信門市消費最高8%再抽5000點",
       "discount_value_pct": "8",
       "points_multiplier": null,
       "deadline": null,
