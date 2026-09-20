@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-19T13:31:39.664955+00:00",
-  "total": 11,
+  "updated_at": "2026-09-20T01:53:41.674728+00:00",
+  "total": 10,
   "errors": {},
   "discounts": [
     {
@@ -72,20 +72,6 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
       "value_score": "15"
-    },
-    {
-      "id": "2b9c6905fbb4",
-      "title": "秋日選品節10%",
-      "platform": "Hami Point",
-      "discount_amount": "秋日選品節10%",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "10"
     },
     {
       "id": "14ca1f6c4d9b",
