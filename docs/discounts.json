@@ -1,22 +1,8 @@
 {
-  "updated_at": "2026-09-30T02:37:09.920637+00:00",
-  "total": 10,
+  "updated_at": "2026-09-30T16:08:15.694656+00:00",
+  "total": 5,
   "errors": {},
   "discounts": [
-    {
-      "id": "109a24717348",
-      "title": "【99開學購物節】買就抽iPad Air、點數回饋狂飆99%",
-      "platform": "Hami Point",
-      "discount_amount": "【99開學購物節】買就抽iPad Air、點數回饋狂飆99%",
-      "discount_value_pct": "99",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "購物",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "99"
-    },
     {
       "id": "b4e89e2e646c",
       "title": "【週三小確幸】2026年9~12月熱門商品🔥限量5折起(週三11:00開放)",
@@ -32,46 +18,32 @@
       "value_score": "50.0"
     },
     {
-      "id": "e4bfe4793e8e",
-      "title": "【票券館】月圓人團圓，烤肉聚餐SO EASY-熱銷優惠8折起",
+      "id": "c95e89b0bc0b",
+      "title": "【票券館】雙十連假，就要 Chill 玩-熱銷6折起",
       "platform": "Hami Point",
-      "discount_amount": "【票券館】月圓人團圓，烤肉聚餐SO EASY-熱銷優惠8折起",
-      "discount_value_pct": "20.0",
+      "discount_amount": "【票券館】雙十連假，就要 Chill 玩-熱銷6折起",
+      "discount_value_pct": "40.0",
       "points_multiplier": null,
       "deadline": null,
       "category": "娛樂",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
-      "value_score": "20.0"
+      "value_score": "40.0"
     },
     {
-      "id": "f716db8d3430",
-      "title": "週五樂翻天最高16%",
+      "id": "fc3f22b2c1e8",
+      "title": "秋日嗨購節限時10%",
       "platform": "Hami Point",
-      "discount_amount": "週五樂翻天最高16%",
-      "discount_value_pct": "16",
+      "discount_amount": "秋日嗨購節限時10%",
+      "discount_value_pct": "10",
       "points_multiplier": null,
       "deadline": null,
       "category": "其他",
       "conditions": [],
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
-      "value_score": "16"
-    },
-    {
-      "id": "826724c302f7",
-      "title": "[優惠二回饋上限已於2026/8/21 15:50 額滿 ]【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "[優惠二回饋上限已於2026/8/21 15:50 額滿 ]【PayPay】遊日本用 iPASS MONEY 最高享 15% 回饋！",
-      "discount_value_pct": "15",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "15"
+      "value_score": "10"
     },
     {
       "id": "14ca1f6c4d9b",
@@ -88,20 +60,6 @@
       "value_score": "10"
     },
     {
-      "id": "516249b48cbe",
-      "title": "一卡通聯名卡自動加值，享 10% 回饋！ 不限通路消費再享 5% 回饋！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "一卡通聯名卡自動加值，享 10% 回饋！ 不限通路消費再享 5% 回饋！",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=1",
-      "urgency_days": null,
-      "value_score": "10"
-    },
-    {
       "id": "220fc8c6bc2c",
       "title": "中華電信門市消費最高8%再抽5000點",
       "platform": "Hami Point",
@@ -114,34 +72,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "8"
-    },
-    {
-      "id": "da7e62af76c3",
-      "title": "週三神回饋 x 神腦生活全站最高8%！",
-      "platform": "Hami Point",
-      "discount_amount": "週三神回饋 x 神腦生活全站最高8%！",
-      "discount_value_pct": "8",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "8"
-    },
-    {
-      "id": "d300437c6c97",
-      "title": "【票券館】每日10:00瘋搶5%回饋券！持券者限取得票券當日刷卡消費享5%回饋，每人每日最高回饋100點。",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】每日10:00瘋搶5%回饋券！持券者限取得票券當日刷卡消費享5%回饋，每人每日最高回饋100點。",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "娛樂",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "5"
     }
   ]
 }
