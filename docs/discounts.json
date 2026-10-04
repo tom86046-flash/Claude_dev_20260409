@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T14:27:24.916444+00:00",
-  "total": 5,
+  "updated_at": "2026-10-04T03:02:10.083533+00:00",
+  "total": 7,
   "errors": {},
   "discounts": [
     {
@@ -32,6 +32,20 @@
       "value_score": "40.0"
     },
     {
+      "id": "02e75e3d877d",
+      "title": "【第一銀行】新申辦附加一卡通功能之第一銀行信用卡，享一卡通自動加值 20% 回饋",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "【第一銀行】新申辦附加一卡通功能之第一銀行信用卡，享一卡通自動加值 20% 回饋",
+      "discount_value_pct": "20",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
+      "urgency_days": null,
+      "value_score": "20"
+    },
+    {
       "id": "fc3f22b2c1e8",
       "title": "秋日嗨購節限時10%",
       "platform": "Hami Point",
@@ -56,6 +70,20 @@
       "category": "其他",
       "conditions": [],
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
+      "urgency_days": null,
+      "value_score": "10"
+    },
+    {
+      "id": "cc1344312516",
+      "title": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
+      "platform": "iPASS 悠游付",
+      "discount_amount": "申辦聯邦銀行 MaiCoin 一卡通聯名卡，樂享自動加值 10% + 消費 10% 雙重優惠！",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://www.i-pass.com.tw/Preferential?type=1",
       "urgency_days": null,
       "value_score": "10"
     },
