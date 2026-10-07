@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-07T02:53:40.137659+00:00",
-  "total": 5,
+  "updated_at": "2026-10-07T17:05:11.864529+00:00",
+  "total": 4,
   "errors": {},
   "discounts": [
     {
@@ -16,20 +16,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "c95e89b0bc0b",
-      "title": "【票券館】雙十連假，就要 Chill 玩-熱銷6折起",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】雙十連假，就要 Chill 玩-熱銷6折起",
-      "discount_value_pct": "40.0",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "娛樂",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "40.0"
     },
     {
       "id": "fc3f22b2c1e8",
