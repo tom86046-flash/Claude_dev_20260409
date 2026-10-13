@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-13T04:06:42.570098+00:00",
-  "total": 5,
+  "updated_at": "2026-10-13T17:11:50.820354+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -16,6 +16,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "3c0f53b6da45",
+      "title": "【雙11狂BUY購物節】最高回饋36%，再抽iPhone 18 Pro",
+      "platform": "Hami Point",
+      "discount_amount": "【雙11狂BUY購物節】最高回饋36%，再抽iPhone 18 Pro",
+      "discount_value_pct": "36",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "購物",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "36"
     },
     {
       "id": "14ca1f6c4d9b",
