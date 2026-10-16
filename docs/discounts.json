@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T14:30:03.131082+00:00",
-  "total": 6,
+  "updated_at": "2026-10-16T01:51:21.776576+00:00",
+  "total": 5,
   "errors": {},
   "discounts": [
     {
@@ -72,20 +72,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "8"
-    },
-    {
-      "id": "0ba1ea8d8159",
-      "title": "【票券館】連假後補給站-Uber通用券，刷卡加碼5%回饋，最高回饋100點",
-      "platform": "Hami Point",
-      "discount_amount": "【票券館】連假後補給站-Uber通用券，刷卡加碼5%回饋，最高回饋100點",
-      "discount_value_pct": "5",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "交通",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "5"
     }
   ]
 }
