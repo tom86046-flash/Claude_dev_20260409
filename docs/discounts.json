@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-21T02:11:35.635096+00:00",
-  "total": 5,
+  "updated_at": "2026-10-21T14:43:47.444002+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -30,6 +30,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "36"
+    },
+    {
+      "id": "71f8b7a03aa7",
+      "title": "2026線上旅展最高10%再送250點",
+      "platform": "Hami Point",
+      "discount_amount": "2026線上旅展最高10%再送250點",
+      "discount_value_pct": "10",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "10"
     },
     {
       "id": "14ca1f6c4d9b",
