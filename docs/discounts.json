@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T14:52:41.992349+00:00",
-  "total": 7,
+  "updated_at": "2026-10-23T02:12:50.687733+00:00",
+  "total": 8,
   "errors": {},
   "discounts": [
     {
@@ -30,6 +30,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "36"
+    },
+    {
+      "id": "7cc041a76fd4",
+      "title": "【票券館】飯店美食限時優惠-熱銷優惠8折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】飯店美食限時優惠-熱銷優惠8折起",
+      "discount_value_pct": "20.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "餐飲",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "20.0"
     },
     {
       "id": "f9312f6e9dad",
