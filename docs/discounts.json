@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T17:24:22.996242+00:00",
-  "total": 8,
+  "updated_at": "2026-11-04T03:31:56.543361+00:00",
+  "total": 9,
   "errors": {},
   "discounts": [
     {
@@ -72,6 +72,20 @@
       "url": "https://www.i-pass.com.tw/Preferential?type=0",
       "urgency_days": null,
       "value_score": "10"
+    },
+    {
+      "id": "68188fa08fed",
+      "title": "PChome指定時段最高9%",
+      "platform": "Hami Point",
+      "discount_amount": "PChome指定時段最高9%",
+      "discount_value_pct": "9",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "購物",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "9"
     },
     {
       "id": "685a67b5644b",
