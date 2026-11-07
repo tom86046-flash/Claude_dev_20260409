@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T03:25:10.074067+00:00",
-  "total": 9,
+  "updated_at": "2026-11-07T15:57:46.320875+00:00",
+  "total": 8,
   "errors": {},
   "discounts": [
     {
@@ -30,20 +30,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "36"
-    },
-    {
-      "id": "02e75e3d877d",
-      "title": "【第一銀行】新申辦附加一卡通功能之第一銀行信用卡，享一卡通自動加值 20% 回饋",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "【第一銀行】新申辦附加一卡通功能之第一銀行信用卡，享一卡通自動加值 20% 回饋",
-      "discount_value_pct": "20",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=1",
-      "urgency_days": null,
-      "value_score": "20"
     },
     {
       "id": "f9312f6e9dad",
