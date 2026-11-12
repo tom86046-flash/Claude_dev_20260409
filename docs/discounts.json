@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-12T04:32:00.971184+00:00",
-  "total": 5,
+  "updated_at": "2026-11-12T17:46:30.274343+00:00",
+  "total": 3,
   "errors": {},
   "discounts": [
     {
@@ -16,20 +16,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "7bc3e6af459a",
-      "title": "【雙11購物節】最高回饋36%，再抽iPhone 18 Pro",
-      "platform": "Hami Point",
-      "discount_amount": "【雙11購物節】最高回饋36%，再抽iPhone 18 Pro",
-      "discount_value_pct": "36",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "購物",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "36"
     },
     {
       "id": "c21b2e1f0d8b",
@@ -58,20 +44,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "8"
-    },
-    {
-      "id": "ac94d7981a9f",
-      "title": "樂TEN祭！樂天市場限時最高6%回饋，滿額再送50點",
-      "platform": "Hami Point",
-      "discount_amount": "樂TEN祭！樂天市場限時最高6%回饋，滿額再送50點",
-      "discount_value_pct": "6",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://hamipoint.cht.com.tw/promotion",
-      "urgency_days": null,
-      "value_score": "6"
     }
   ]
 }
