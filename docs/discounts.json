@@ -1,8 +1,22 @@
 {
-  "updated_at": "2026-11-15T03:22:55.397549+00:00",
-  "total": 3,
+  "updated_at": "2026-11-15T16:40:35.340655+00:00",
+  "total": 4,
   "errors": {},
   "discounts": [
+    {
+      "id": "b52d9001f00d",
+      "title": "【票券館】全台人氣湯屋熱銷推薦-商品優惠5折起",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】全台人氣湯屋熱銷推薦-商品優惠5折起",
+      "discount_value_pct": "50.0",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "50.0"
+    },
     {
       "id": "1e5af3266fa5",
       "title": "【週三小確幸】2026年10~12月熱門商品🔥限量5折起(週三11:00開放)",
