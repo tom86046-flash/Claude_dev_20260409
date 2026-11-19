@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T04:42:44.953346+00:00",
-  "total": 4,
+  "updated_at": "2026-11-19T18:43:20.640542+00:00",
+  "total": 5,
   "errors": {},
   "discounts": [
     {
@@ -30,6 +30,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
+    },
+    {
+      "id": "697065ae7f94",
+      "title": "週五樂翻天! 樂天市場最高16%",
+      "platform": "Hami Point",
+      "discount_amount": "週五樂翻天! 樂天市場最高16%",
+      "discount_value_pct": "16",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "其他",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "16"
     },
     {
       "id": "c21b2e1f0d8b",
