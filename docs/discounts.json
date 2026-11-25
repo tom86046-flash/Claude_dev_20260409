@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24T20:24:42.934651+00:00",
-  "total": 4,
+  "updated_at": "2026-11-25T05:48:47.216129+00:00",
+  "total": 3,
   "errors": {},
   "discounts": [
     {
@@ -30,20 +30,6 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "50.0"
-    },
-    {
-      "id": "c21b2e1f0d8b",
-      "title": "[活動回饋上限已於2026/11/11 19:00額滿 ] 用 iPASS MONEY 消費，最高享 10% 回饋！",
-      "platform": "iPASS 悠游付",
-      "discount_amount": "[活動回饋上限已於2026/11/11 19:00額滿 ] 用 iPASS MONEY 消費，最高享 10% 回饋！",
-      "discount_value_pct": "10",
-      "points_multiplier": null,
-      "deadline": null,
-      "category": "其他",
-      "conditions": [],
-      "url": "https://www.i-pass.com.tw/Preferential?type=0",
-      "urgency_days": null,
-      "value_score": "10"
     },
     {
       "id": "220fc8c6bc2c",
