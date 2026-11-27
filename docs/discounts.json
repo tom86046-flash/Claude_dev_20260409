@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-27T05:32:26.999001+00:00",
-  "total": 5,
+  "updated_at": "2026-11-27T19:13:32.199516+00:00",
+  "total": 6,
   "errors": {},
   "discounts": [
     {
@@ -58,6 +58,20 @@
       "url": "https://hamipoint.cht.com.tw/promotion",
       "urgency_days": null,
       "value_score": "8"
+    },
+    {
+      "id": "48db9cc72813",
+      "title": "【票券館】天天搶紅包-1點換購5%回饋券",
+      "platform": "Hami Point",
+      "discount_amount": "【票券館】天天搶紅包-1點換購5%回饋券",
+      "discount_value_pct": "5",
+      "points_multiplier": null,
+      "deadline": null,
+      "category": "娛樂",
+      "conditions": [],
+      "url": "https://hamipoint.cht.com.tw/promotion",
+      "urgency_days": null,
+      "value_score": "5"
     },
     {
       "id": "899309bd3f68",
